@@ -1,0 +1,40 @@
+# Site settings
+title: Etrain
+description: Tech blog
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://etrain.xyz"
+
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
+disqus_username: lorem_ipsum
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+port: 4000
+host: localhost
+
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# exclude my node related stuff
+include: ['_pages']
+exclude: ["CNAME", "LICENSE", "README.md"]
+
+plugins:
+  - jekyll-multiple-languages-plugin
+
+languages: ["vi", "en"]
+exclude_from_localizations: ["_site"]

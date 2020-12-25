@@ -1,0 +1,23 @@
+global:
+  english: English
+  vietnamese: Vietnamese
+titles:
+  about: About
+  series: Series
+  tags: "#Tags"
+pages:
+  about:
+    description: Tech website
+  series:
+    description: List posts by category
+  tags:
+    description: "Search for your favorite #tag."
+menu:
+  - title: Home
+    url: /
+  - title: Series
+    url: /series
+  - title: Tags
+    url: /tags
+  - title: About
+    url: /about
