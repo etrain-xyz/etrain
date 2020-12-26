@@ -1,0 +1,12 @@
+global:
+  english: Tiếng Anh
+  vietnamese: Tiếng Việt
+menu:
+  - title: Trang chủ
+    url: /
+  - title: Bài viết
+    url: /series
+  - title: Nhãn
+    url: /tags
+  - title: Giới thiệu
+    url: /about

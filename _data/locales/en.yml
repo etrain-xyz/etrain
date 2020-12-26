@@ -1,0 +1,12 @@
+global:
+  english: English
+  vietnamese: Vietnamese
+menu:
+  - title: Home
+    url: /en
+  - title: Series
+    url: /en/series
+  - title: Tags
+    url: /en/tags
+  - title: About
+    url: /en/about

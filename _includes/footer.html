@@ -1,16 +1,20 @@
 <footer>
 	<p>
-		{% if site.lang == "vi" %}
-		{% capture link1 %}{{ site.baseurl_root }}/en{{ page.url}}{% endcapture %}
-		<span><a class="enable_anchor" onclick="changeLanguage('en', '{{ link1 }}')">{% t global.english %}</a></span> | <span class="disable_anchor">{% t global.vietnamese %}</span>
-		{% elsif site.lang == "en" %}
-		{% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
-		<span class="disable_anchor">{% t global.english %}</span> | <span><a class="enable_anchor" onclick="changeLanguage('vi', '{{ link2 }}')">{% t global.vietnamese %}</a></span>
+		{% if page.locale == "vi" %}
+		<span><a class="enable_anchor" onclick="changeLanguage('en', 'vi')">{{ site.data.locales[page.locale].global.english }}</a></span> | <span class="disable_anchor">{{ site.data.locales[page.locale].global.vietnamese }}</span>
+		{% elsif page.locale == "en" %}
+		<span class="disable_anchor">{{ site.data.locales[page.locale].global.english }}</span> | <span><a class="enable_anchor" onclick="changeLanguage('vi', 'en')">{{ site.data.locales[page.locale].global.vietnamese }}</a></span>
 		{% endif %}
 	</p>
 	<p>Made with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <span class="love">❤</span> by <a
 			href="https://github.com/willianjusten/cards-jekyll-template">Willian Justen</a></p>
 </footer>
-<script src="{{ '/assets/js/jekyll.js' | prepend: site.baseurl }}"></script>
+<script>
+	{% if page.locale == "vi" %}
+	BASEURL = "{{ site.url }}{{site.baseurl}}";
+	{% elsif page.locale == "en" %}
+	BASEURL = "{{ site.url }}{{site.baseurl}}/en";
+	{% endif %}
+</script>
 <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>

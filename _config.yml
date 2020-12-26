@@ -30,11 +30,33 @@ compress_html:
   profile: false
 
 # exclude my node related stuff
-include: ['_pages']
 exclude: ["CNAME", "LICENSE", "README.md"]
 
-plugins:
-  - jekyll-multiple-languages-plugin
+# multiple language
+defaults:
+  # default vi
+  - values:
+      locale: vi
+  # config posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /posts/:title
+  - scope:
+      path: _posts/en/**
+      type: posts
+    values:
+      layout: post
+      locale: en
+      permalink: /en/posts/:title
+  # config pages
+  - scope: 
+      path: _en/**
+    values:
+      locale: en
 
-languages: ["vi", "en"]
-exclude_from_localizations: ["_site"]
+collections:
+  en: 
+    output: true
