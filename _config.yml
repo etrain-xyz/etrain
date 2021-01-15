@@ -3,15 +3,14 @@ title: Etrain
 description: Tech blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://etrain.xyz"
+future: true
 
 # User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+username: Etrain
+user_description: Tech Blog
+# email: support@etrain.xyz
+github_username:  etrain-xyz
+# disqus_username: lorem_ipsum
 
 # Build settings
 markdown: kramdown

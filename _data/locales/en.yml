@@ -10,3 +10,7 @@ menu:
     url: /en/tags
   - title: About
     url: /en/about
+post:
+  discussion: Discussion
+page:
+  author: Author

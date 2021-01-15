@@ -10,3 +10,7 @@ menu:
     url: /tags
   - title: Giới thiệu
     url: /about
+post:
+  discussion: Thảo luận
+page:
+  author: Tác giả
