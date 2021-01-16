@@ -128,21 +128,36 @@ from google.colab import drive
 drive.mount("/content/drive", force_remount=True)
 ```
 
-Chúng ta sẽ để dữ liệu ở `/content/drive/My Drive/Etrain/speech-to-text/vi.tar.gz`. Chạy lệnh dưới đây để giải nén về thư mục trên colab. Do model chạy với tập tin có đuôi là wav 16000 bitrate mà dữ liệu trên Common Voide có đuôi là mp3, nên bạn cần phải dùng `ffmpeg` để convert về định dạng wav.
+Chúng ta sẽ để dữ liệu ở `/content/drive/My Drive/Etrain/speech-to-text/vi.tar.gz`.
 
 ```bash
 %cd /content/
 !tar -xzf '/content/drive/My Drive/Etrain/speech-to-text/vi.tar.gz'
 # Tạo thư mục chứa tập tin .wav
 !mkdir /content/data
-# Ở bài viết này Etrain sẽ thử nghiệm 5 tập tin wav sau
-%cd /content/cv-corpus-5.1-2020-06-22/vi/clips
-!ffmpeg -i common_voice_vi_21833280.mp3 -acodec pcm_s16le -ac 1 -ar 16000 /content/data/common_voice_vi_21833280.wav
-!ffmpeg -i common_voice_vi_21833328.mp3 -acodec pcm_s16le -ac 1 -ar 16000 /content/data/common_voice_vi_21833328.wav
-!ffmpeg -i common_voice_vi_21861994.mp3 -acodec pcm_s16le -ac 1 -ar 16000 /content/data/common_voice_vi_21861994.wav
-!ffmpeg -i common_voice_vi_21964746.mp3 -acodec pcm_s16le -ac 1 -ar 16000 /content/data/common_voice_vi_21964746.wav
-!ffmpeg -i common_voice_vi_22008973.mp3 -acodec pcm_s16le -ac 1 -ar 16000 /content/data/common_voice_vi_22008973.wav
+# Tạo thư mục chứa tập tin .mp3
+!mkdir /content/mp3_data
 ```
+
+Chúng ta sẽ lấy dữ liệu trong tập `validated.txt` và chỉ lấy những dữ liệu không có downvote để xem kết quả của model.
+
+```python
+import pandas as pd
+from shutil import copyfile
+
+validated = pd.read_csv('/content/cv-corpus-5.1-2020-06-22/vi/validated.tsv', sep='\t', usecols=['path', 'sentence', 'up_votes', 'down_votes'])
+df = validated[validated['down_votes'] == 0]
+
+for index, row in df.iterrows():
+    copyfile('/content/cv-corpus-5.1-2020-06-22/vi/clips/' + row['path'], '/content/mp3_data/' + row['path'])
+```
+
+ Do model chạy với tập tin có đuôi là wav 16000 bitrate mà dữ liệu trên Common Voide có đuôi là mp3, nên bạn cần phải dùng `ffmpeg` để convert về định dạng wav.
+
+ ```bash
+%cd '/content/mp3_data/'
+!for i in *.mp3; do name=`echo "$i" | cut -d'.' -f1` ; ffmpeg -i "${name}.mp3" -acodec pcm_s16le -ac 1 -ar 16000 "/content/data/${name}.wav"; done
+ ```
 
 
 Tạo tập tin `config.txt` để chuẩn bị chạy demo
@@ -183,30 +198,28 @@ Cuối cùng là chạy file inference để xem kết quả
 
 ### Kết quả sau khi chạy
 
-#### 1 - Tập tin common_voice_vi_21861994.wav
-- Nội dung văn bản: ĐỨNG TRƯỚC BÀN THỜ TRINH VUI SƯỚNG NÓI
-- Kết quả dự đoán: ĐỨNG TRƯỚC BÀN THỜ **CHINH** VUI **TƯỚNG** NÓI
+Mặc định file kết quả sẽ được lưu vào thư mục `/content/self-supervised-speech-recognition/result.csv`.
+Chúng ta sẽ dùng công cụ [asr-evaluation](https://github.com/belambert/asr-evaluation) để đánh giá mô hình
 
-#### 2 - Tập tin common_voice_vi_21833280.wav
-- Nội dung văn bản: TAY LÀM HÀM NHAI TAY QUAI MIỆNG TRỄ
-- Kết quả dự đoán: **TAI** LÀM HÀM NHAI TAY QUAI MIỆNG TRỄ
+```python
+import os
+hypo_df = pd.read_csv('result.csv')
+hypo_df['path'] = hypo_df['path'].map(lambda x: os.path.basename(x).split(".wav")[0] + ".mp3")
+data_df = pd.merge(df, hypo_df, on='path', how='outer')
+data_df['sentence'].str.lower().to_csv('/content/reference.txt', header=False, index=False)
+data_df['hypos'].str.lower().to_csv('/content/hypothesis.txt', header=False, index=False)
+```
 
-#### 3 - Tập tin common_voice_vi_21833328.wav
-- Nội dung văn bản: QUAY LẠI SAU CẬU BẠN NHÌN CHINH RỒI NÓI
-- Kết quả dự đoán: QUAY LẠI SAU CẬU BẠN NHÌN **TRINH** RỒI NÓI
+```bash
+!pip install asr-evaluation
+!wer -i /content/reference.txt /content/hypothesis.txt
+```
 
-#### 4 - Tập tin common_voice_vi_22008973.wav
-- Nội dung văn bản: THÌ CHẮC CHẮN CON GÁI NHÀ CÔ SẼ GẶP VẬN LỚN
-- Kết quả dự đoán: **KHÌ** CHẮC CHẮN CON GÁI NHÀ CÔ SẼ GẮP **VẬT** LỚN
+![result speech to text](/assets/img/posts/result-speech2text.png)
 
-#### 5 - Tập tin common_voice_vi_21964746.wav
-- Nội dung văn bản: NHỮNG CÂU CHUYỆN HAY NHỮNG BỨC ẢNH ĐƯỢC CHÚNG TÔI KHOE LẠI
-- Kết quả dự đoán: NHỮNG CÂU CHUYỆN **THAY** NHỮNG BỨC ẢNH ĐƯỢC CHÚNG TÔI KHOE **LOẠI**
-
-Nếu nghe kỹ các đoạn audio trên thì thực ra có một số lỗi sai là do người dùng phát âm chưa chuẩn. Mọi người có thể thử nghiệm thêm.
 
 
 ## Nguồn tham khảo
 - [Huấn luyện các mô hình AI với dữ liệu nhỏ](http://amatech.funix.edu.vn/2020/03/13/huan-luyen-cac-mo-hinh-ai-voi-du-lieu-nho/)
 - [Self-supervised speech recognition with limited amount of labeled data](https://github.com/mailong25/self-supervised-speech-recognition)
-
+- [Evaluating an automatic speech recognition service](https://aws.amazon.com/blogs/machine-learning/evaluating-an-automatic-speech-recognition-service/)
