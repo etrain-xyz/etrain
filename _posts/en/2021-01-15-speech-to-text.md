@@ -3,7 +3,7 @@ title: "Self-supervised speech recognition"
 date: 2021-01-15 15:43:23
 image: '/assets/img/posts/SpeechToText-1024x473.png'
 description: 'Self-supervised speech recognition with limited amount of labeled data'
-main-class: 'demo'
+main-class: 'guide'
 color: '#22857b'
 tags:
 - python
