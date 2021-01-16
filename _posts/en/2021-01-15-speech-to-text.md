@@ -93,17 +93,15 @@ Install `fairseq`
 !python setup.py build develop
 ```
 
-Install dependencies for `wav2letter`
+Install `wav2letter`
 
 ```bash
+# Install dependencies
 !apt-get update && apt-get upgrade -y && apt-get install -y && apt-get -y install apt-utils gcc libpq-dev libsndfile-dev
 !apt install build-essential cmake libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
 !apt-get install libsndfile1-dev libopenblas-dev libfftw3-dev libgflags-dev libgoogle-glog-dev
-```
 
-Install `kenlm`
-
-```bash
+# Install kenlm
 %cd /content/
 !git clone https://github.com/kpu/kenlm.git
 %cd /content/kenlm/
@@ -111,11 +109,8 @@ Install `kenlm`
 %cd build
 !cmake ..
 !make -j 4
-```
 
-Install `wav2letter`
-
-```bash
+# Install wav2letter
 %cd /content/
 !rm -rf /content/wav2letter
 !git clone -b v0.2 https://github.com/facebookresearch/wav2letter.git

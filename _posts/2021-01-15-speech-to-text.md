@@ -91,16 +91,14 @@ Cài đặt `fairseq`
 !python setup.py build develop
 ```
 
-Cài đặt các gói phụ thuộc cho thư viện `wav2letter`
+Cài đặt thư viện `wav2letter`
 ```bash
+# Cài các gói phụ thuộc
 !apt-get update && apt-get upgrade -y && apt-get install -y && apt-get -y install apt-utils gcc libpq-dev libsndfile-dev
 !apt install build-essential cmake libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
 !apt-get install libsndfile1-dev libopenblas-dev libfftw3-dev libgflags-dev libgoogle-glog-dev
-```
 
-
-Cài đặt `kenlm`
-```bash
+# Cài đặt kenlm
 %cd /content/
 !git clone https://github.com/kpu/kenlm.git
 %cd /content/kenlm/
@@ -108,11 +106,8 @@ Cài đặt `kenlm`
 %cd build
 !cmake ..
 !make -j 4
-```
 
-
-Cài đặt thư viện `wav2letter`
-```bash
+# Cài đặt wav2letter
 %cd /content/
 !rm -rf /content/wav2letter
 !git clone -b v0.2 https://github.com/facebookresearch/wav2letter.git
