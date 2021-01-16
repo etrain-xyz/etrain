@@ -139,7 +139,7 @@ Chúng ta sẽ để dữ liệu ở `/content/drive/My Drive/Etrain/speech-to-t
 !mkdir /content/mp3_data
 ```
 
-Chúng ta sẽ lấy dữ liệu trong tập `validated.txt` và chỉ lấy những dữ liệu không có downvote để xem kết quả của model.
+Chúng ta sẽ lấy dữ liệu trong tập `validated.tsv` và chỉ lấy những dữ liệu không có downvote để xem kết quả của model.
 
 ```python
 import pandas as pd
@@ -210,6 +210,7 @@ data_df['sentence'].str.lower().to_csv('/content/reference.txt', header=False, i
 data_df['hypos'].str.lower().to_csv('/content/hypothesis.txt', header=False, index=False)
 ```
 
+Sử dụng câu lệnh dưới đây để đánh giá mô hình
 ```bash
 !pip install asr-evaluation
 !wer -i /content/reference.txt /content/hypothesis.txt
