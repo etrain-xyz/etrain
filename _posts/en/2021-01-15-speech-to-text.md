@@ -203,7 +203,7 @@ Run the inference and see the results
 
 ### The results
 
-The default result location is `/content/self-supervised-speech-recognition/result.csv`. We use [asr-evaluation](https://github.com/belambert/asr-evaluation) tool to evaluate model.
+The default result location is `/content/self-supervised-speech-recognition/result.csv`. The most common metric for speech recognition accuracy is called word error rate (WER). The lower the WER, the more accurate the system We use [asr-evaluation](https://github.com/belambert/asr-evaluation) tool to calculate the wer metric.
 
 ```python
 import os

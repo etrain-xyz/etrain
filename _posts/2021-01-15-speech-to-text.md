@@ -198,8 +198,7 @@ Cuối cùng là chạy file inference để xem kết quả
 
 ### Kết quả sau khi chạy
 
-Mặc định file kết quả sẽ được lưu vào thư mục `/content/self-supervised-speech-recognition/result.csv`.
-Chúng ta sẽ dùng công cụ [asr-evaluation](https://github.com/belambert/asr-evaluation) để đánh giá mô hình
+Mặc định file kết quả sẽ được lưu vào thư mục `/content/self-supervised-speech-recognition/result.csv`. Ta sử dụng chỉ số WER để đánh giá mô hình. Chỉ số này càng nhỏ thì mô hình càng chính xác. Chúng ta sẽ dùng công cụ [asr-evaluation](https://github.com/belambert/asr-evaluation) để tính chỉ số này
 
 ```python
 import os
