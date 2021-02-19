@@ -172,3 +172,31 @@ h1, h2, h3, h4, h5, h6, time, p {
 	height: 100%;
 	display: table-cell;
 }
+
+.screen-tv {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.screen-tv img {
+	margin: 0 auto !important;
+	max-width: 330px !important;
+	display: inherit !important;
+}
+
+.image-link {
+	color: transparent !important;
+	border-bottom: transparent !important;
+}
+
+.image-link:hover {
+	background: transparent !important;;
+	color: transparent !important;
+}
+
+.cabinet-img {
+	margin: 0 auto !important;
+}

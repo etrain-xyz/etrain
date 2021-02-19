@@ -91,6 +91,14 @@ Cài đặt `fairseq`
 !python setup.py build develop
 ```
 
+<div>
+<div class="screen-tv">
+<a class="image-link" href="https://pinggo.vn/products/Gorenje-May-xay-sinh-to-cao-cap-Power-Blender-BPC2B?ref=75576dd5c4"><img src="/assets/img/ads/Power-blender-Gorenje-BPC2B.gif"></a>
+</div>
+<img class="cabinet-img" src="/assets/img/cabinet-tv.png">
+</div>
+
+
 Cài đặt thư viện `wav2letter`
 ```bash
 # Cài các gói phụ thuộc

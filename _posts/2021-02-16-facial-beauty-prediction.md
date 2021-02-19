@@ -64,6 +64,14 @@ Tải bộ dữ liệu [SCUT-FBP5500](https://drive.google.com/open?id=1w0TorBfT
 !unzip -q 'SCUT-FBP5500_v2.1.zip'
 ```
 
+<div>
+<div class="screen-tv">
+<a class="image-link" href="https://pinggo.vn/products/Xiaomi-May-hut-am-New-Widetech-2-dung-tich?ref=75576dd5c4"><img src="/assets/img/ads/xiaomi-new-widetech.gif"></a>
+</div>
+<img class="cabinet-img" src="/assets/img/cabinet-tv.png">
+</div>
+
+
 Trong bài viết này Etrain sẽ train dữ liệu với `resnet18`, bạn có thể tìm hiểu thêm ở file [model.py](https://github.com/etrain-xyz/facial-beauty-prediction/blob/master/model.py).
 
 ```python
