@@ -148,5 +148,8 @@ for i, image in enumerate(images):
     plt.imshow(image)
 ```
 
-
 ![SCUT-FBP5500-score](/assets/img/posts/SCUT_FBP5500-result.png)
+
+## References
+
+Click [here]((https://github.com/etrain-xyz/facial-beauty-prediction)) to see more
