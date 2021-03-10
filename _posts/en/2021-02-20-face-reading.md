@@ -13,7 +13,7 @@ twitter_text: 'Face reading using Deep learning'
 introduction: 'Face reading using Deep learning'
 ---
 
-In [this post](/posts/facial-beauty-prediction) Etrain introduced the face beauty score model. Today, Etrain introduce the [face2fate](https://github.com/YeyunLU/Face2Fate) repo, we can predict a person's personality via their facial features.
+In [this post](/en/posts/facial-beauty-prediction) Etrain introduced the face beauty score model. Today, Etrain introduce the [face2fate](https://github.com/YeyunLU/Face2Fate) repo, we can predict a person's personality via their facial features.
 
 ![Face Reading](/assets/img/posts/face-reading.png)
 
