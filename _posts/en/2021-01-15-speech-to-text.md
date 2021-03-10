@@ -3,8 +3,7 @@ title: "Self-supervised speech recognition"
 date: 2021-01-15 15:43:23
 image: '/assets/img/posts/SpeechToText-1024x473.png'
 description: 'Self-supervised speech recognition with limited amount of labeled data'
-main-class: 'guide'
-color: '#22857b'
+main-class: 'research'
 tags:
 - python
 - NLP
@@ -20,7 +19,7 @@ introduction: 'Self-supervised speech recognition with limited amount of labeled
 
 First, we need to know about the self-supervised learning, what problem does it solve.
 
-As manufacturers begin to integrate AI solutions into production lines, data scarcity has emerged as a major challenge. Unlike consumer Internet companies, which have data from billions of users to train powerful AI models, collecting massive training sets in manufacturing is often not feasible.
+As manufacturers begin to integrate AI solutions into production lines, data scarcity has emerged as a major competition. Unlike consumer Internet companies, which have data from billions of users to train powerful AI models, collecting massive training sets in manufacturing is often not feasible.
 
 For example, in automotive manufacturing, where lean Six Sigma practices have been widely adopted, most OEMs and Tier One suppliers strive to have fewer than three to four defects per million parts. The rarity of these defects makes it challenging to have sufficient defect data to train visual inspection models.
 

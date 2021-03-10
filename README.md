@@ -7,7 +7,7 @@ jekyll serve --safe
 - `post-guide`
 - `post-competition`
 - `post-dev`
-- `post-misc`
+- `post-research`
 - `post-tutorial`
 - `post-demo`
 - `post-funny`

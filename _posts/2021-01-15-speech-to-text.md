@@ -3,8 +3,7 @@ title: "Học tự giám sát trong nhận diện giọng nói"
 date: 2021-01-15 15:43:23
 image: '/assets/img/posts/SpeechToText-1024x473.png'
 description: 'Mô hình học tự giám sát trong bài toán chuyển đổi giọng nói thành văn bản.'
-main-class: 'guide'
-color: '#22857b'
+main-class: 'research'
 tags:
 - python
 - NLP
