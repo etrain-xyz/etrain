@@ -66,7 +66,7 @@ Tải bộ dữ liệu [SCUT-FBP5500](https://drive.google.com/open?id=1w0TorBfT
 
 <div>
 <div class="screen-tv">
-<a class="image-link" href="https://pinggo.vn/products/Xiaomi-May-hut-am-New-Widetech-2-dung-tich?ref=75576dd5c4"><img src="/assets/img/ads/xiaomi-new-widetech.gif"></a>
+<a class="image-link" href="https://pwieu.com/click-FQLMKJP1-KHEQCJKZ?bt=25&tl=1&url=https%3A%2F%2Fshopee.vn%2Fp-i.12209946.4258612412"><img src="/assets/img/ads/xiaomi-new-widetech.gif"></a>
 </div>
 <img class="cabinet-img" src="/assets/img/cabinet-tv.png">
 </div>

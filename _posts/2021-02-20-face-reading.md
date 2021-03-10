@@ -151,7 +151,7 @@ Tạo tập tin `analysis.json` trong thư mục data
 
 <div>
 <div class="screen-tv">
-<a class="image-link" href="https://pinggo.vn/products/4M-Robot-nang-luong-mat-troi?ref=75576dd5c4"><img src="/assets/img/ads/4m-solar-robot.gif"></a>
+<a class="image-link" href="https://pwieu.com/click-FQLMKJP1-KHEQCJKZ?bt=25&tl=1&url=https%3A%2F%2Fshopee.vn%2Fp-i.371881430.5280975247"><img src="/assets/img/ads/4m-solar-robot.gif"></a>
 </div>
 <img class="cabinet-img" src="/assets/img/cabinet-tv.png">
 </div>

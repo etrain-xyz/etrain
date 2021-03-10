@@ -93,7 +93,7 @@ Cài đặt `fairseq`
 
 <div>
 <div class="screen-tv">
-<a class="image-link" href="https://pinggo.vn/products/Gorenje-May-xay-sinh-to-cao-cap-Power-Blender-BPC2B?ref=75576dd5c4"><img src="/assets/img/ads/Power-blender-Gorenje-BPC2B.gif"></a>
+<a class="image-link" href="https://pwieu.com/click-FQLMKJP1-KHEQCJKZ?bt=25&tl=1&url=https%3A%2F%2Fshopee.vn%2Fp-i.33763295.8618927063"><img src="/assets/img/ads/Power-blender-Gorenje-BPC2B.gif"></a>
 </div>
 <img class="cabinet-img" src="/assets/img/cabinet-tv.png">
 </div>
