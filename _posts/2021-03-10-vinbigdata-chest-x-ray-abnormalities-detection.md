@@ -248,4 +248,4 @@ Tạo tập tin yaml cho Yolov5
 
 ![Vinbigdata Result](/assets/img/posts/vinbigdata-xray-result.png)
 
-Kết quả Public score trên kaggle: 0.223
+Kết quả [Public score trên kaggle](https://www.kaggle.com/duythanhng/vinbigdata-yolov5-16-class): 0.230

@@ -241,4 +241,4 @@ The `config.yaml` file
 
 ![Vinbigdata Result](/assets/img/posts/vinbigdata-xray-result.png)
 
-Public score on kaggle: 0.223
+[Public score on kaggle](https://www.kaggle.com/duythanhng/vinbigdata-yolov5-16-class): 0.230
