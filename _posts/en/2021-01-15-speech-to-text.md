@@ -60,27 +60,23 @@ Clone the Etrain repo. This repo is forked from the original repo. The goal was 
 !pip install soundfile
 ```
 
-Check cuda version
+### Install `torch`
+
+Wav2letter does not work with cuda v11. You need downgrade to cuda v10
 
 ```bash
 !nvcc --version
-#nvcc: NVIDIA (R) Cuda compiler driver
-#Copyright (c) 2005-2019 NVIDIA Corporation
-#Built on Sun_Jul_28_19:07:16_PDT_2019
-#Cuda compilation tools, release 10.1, V10.1.243
-```
 
-Install `torch`
+# Downgrade to v10.1 if the current version is 11
+!rm -rf /usr/local/cuda
+!ln -s /usr/local/cuda-10.1 /usr/local/cuda
 
-```bash
 !pip install torchvision==0.7.0
-# If cuda version < 11 (eg. cuda 10.1):
 !pip install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
-# If cuda >= 11:
-!pip install torch==1.6.0
 ```
 
-Install `fairseq`
+### Install `fairseq`
+
 ```bash
 !pip install fairseq==0.9.0
 !pip show fairseq
@@ -92,14 +88,9 @@ Install `fairseq`
 !python setup.py build develop
 ```
 
-Install `wav2letter`
+### Install `kenlm`
 
 ```bash
-# Install dependencies
-!apt-get update && apt-get upgrade -y && apt-get install -y && apt-get -y install apt-utils gcc libpq-dev libsndfile-dev
-!apt install build-essential cmake libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
-!apt-get install libsndfile1-dev libopenblas-dev libfftw3-dev libgflags-dev libgoogle-glog-dev
-
 # Install kenlm
 %cd /content/
 !git clone https://github.com/kpu/kenlm.git
@@ -108,6 +99,16 @@ Install `wav2letter`
 %cd build
 !cmake ..
 !make -j 4
+```
+
+### Install `wav2letter`
+
+
+```bash
+# Install dependencies
+!apt-get update && apt-get upgrade -y && apt-get install -y && apt-get -y install apt-utils gcc libpq-dev libsndfile-dev
+!apt install build-essential cmake libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
+!apt-get install libsndfile1-dev libopenblas-dev libfftw3-dev libgflags-dev libgoogle-glog-dev
 
 # Install wav2letter
 %cd /content/
@@ -116,6 +117,8 @@ Install `wav2letter`
 %cd wav2letter/bindings/python
 !export KENLM_ROOT_DIR=/content/kenlm/ && pip install -e .
 ```
+
+### Inference
 
 We use the `Common Voice Corpus 5.1` dataset in [Common Voice](https://commonvoice.mozilla.org/vi/datasets) for this demo. Download the dataset and upload to your drive and mount the directory in drive to colab.
 

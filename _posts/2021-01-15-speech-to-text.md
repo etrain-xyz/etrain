@@ -57,28 +57,22 @@ Tải dự án từ github. Dự án này Etrain đã fork từ dự án gốc v
 # Cài đặt thư viện soundfile
 !pip install soundfile
 ```
+### Cài đặt `torch`
 
-Kiểm tra phiên bản của cuda
+Wav2letter không hoạt động với cuda version 11, nên nếu colab của bạn là 11 thì phải chuyển về version 10
 
 ```bash
 !nvcc --version
-#nvcc: NVIDIA (R) Cuda compiler driver
-#Copyright (c) 2005-2019 NVIDIA Corporation
-#Built on Sun_Jul_28_19:07:16_PDT_2019
-#Cuda compilation tools, release 10.1, V10.1.243
-```
 
-Cài đặt `torch`
+# Chuyển cuda về version 10.1 nếu version hiện tại là 11
+!rm -rf /usr/local/cuda
+!ln -s /usr/local/cuda-10.1 /usr/local/cuda
 
-```bash
 !pip install torchvision==0.7.0
-# Nếu phiên bản cuda < 11 thì cài phiên bản sau
 !pip install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
-# Nếu phiên bản cuda >= 11 thì cài phiên bản sau
-!pip install torch==1.6.0
 ```
 
-Cài đặt `fairseq`
+### Cài đặt `fairseq`
 ```bash
 !pip install fairseq==0.9.0
 !pip show fairseq
@@ -98,13 +92,8 @@ Cài đặt `fairseq`
 </div>
 
 
-Cài đặt thư viện `wav2letter`
+### Cài đặt thư viện `kenlm`
 ```bash
-# Cài các gói phụ thuộc
-!apt-get update && apt-get upgrade -y && apt-get install -y && apt-get -y install apt-utils gcc libpq-dev libsndfile-dev
-!apt install build-essential cmake libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
-!apt-get install libsndfile1-dev libopenblas-dev libfftw3-dev libgflags-dev libgoogle-glog-dev
-
 # Cài đặt kenlm
 %cd /content/
 !git clone https://github.com/kpu/kenlm.git
@@ -113,6 +102,15 @@ Cài đặt thư viện `wav2letter`
 %cd build
 !cmake ..
 !make -j 4
+```
+
+### Cài đặt thư viện `wav2letter`
+
+```bash
+# Cài các gói phụ thuộc
+!apt-get update && apt-get upgrade -y && apt-get install -y && apt-get -y install apt-utils gcc libpq-dev libsndfile-dev
+!apt install build-essential cmake libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
+!apt-get install libsndfile1-dev libopenblas-dev libfftw3-dev libgflags-dev libgoogle-glog-dev
 
 # Cài đặt wav2letter
 %cd /content/
@@ -122,6 +120,7 @@ Cài đặt thư viện `wav2letter`
 !export KENLM_ROOT_DIR=/content/kenlm/ && pip install -e .
 ```
 
+### Chạy thử nghiệm
 
 Trong bài demo này Etrain sử dụng dữ liệu tiếng Việt phiên bản `Common Voice Corpus 5.1` trên trang [Common Voice](https://commonvoice.mozilla.org/vi/datasets), để thử nghiệm. Sau khi tải về bạn up lên drive và mount lên colab bạn đang làm việc.
 
