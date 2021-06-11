@@ -9,6 +9,7 @@ tags:
 - deep learning
 - face recognition
 categories:
+- 'Face reading'
 twitter_text: 'Face reading using Deep learning'
 introduction: 'Face reading using Deep learning'
 ---

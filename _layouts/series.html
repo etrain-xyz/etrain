@@ -3,9 +3,10 @@ layout: minimal
 ---
 
 {% for tag in site.categories %}
+  {% assign pages_list = tag[1] | where: "locale", page.locale %}
+  {% if pages_list.size > 0 %}
   <span class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</span>
   <ul class="post-list">
-    {% assign pages_list = tag[1] | where: "locale", page.locale %}
     {% for post in pages_list reversed %}
       {% if post.title != null %}
       {% if group == null or group == post.group %}
@@ -16,4 +17,5 @@ layout: minimal
     {% assign pages_list = nil %}
     {% assign group = nil %}
   </ul>
+  {% endif %}
 {% endfor %}

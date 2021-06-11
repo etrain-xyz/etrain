@@ -9,6 +9,7 @@ tags:
 - deep learning
 - face recognition
 categories:
+- 'Face reading'
 twitter_text: 'Face beauty score model'
 introduction: 'Face beauty score model'
 ---

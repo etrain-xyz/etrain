@@ -9,6 +9,7 @@ tags:
 - deep learning
 - face recognition
 categories:
+- 'Nhân tướng học'
 twitter_text: 'Mô hình chấm điểm khuôn mặt.'
 introduction: 'Mô hình chấm điểm khuôn mặt.'
 ---

@@ -9,6 +9,7 @@ tags:
 - deep learning
 - face recognition
 categories:
+- 'Nhân tướng học'
 twitter_text: 'Xem tướng sử dụng học sâu.'
 introduction: 'Xem tướng sử dụng học sâu.'
 ---
