@@ -48,4 +48,12 @@ youtube-dl -F https://www.youtube.com/watch?v=9LS4XCNyRKA
 youtube-dl -f 136 https://www.youtube.com/watch?v=9LS4XCNyRKA
 ```
 
+<div>
+<div class="screen-tv">
+<a class="image-link" href="https://pwieu.com/click-FQLMKJP1-KHEQCJKZ?bt=25&tl=1&url=https%3A%2F%2Fshopee.vn%2Fp-i.299252.2562488186"><img src="/assets/img/ads/Mijia-Bicycle-Pump-MJCQB01QJ.gif"></a>
+</div>
+<img class="cabinet-img" src="/assets/img/cabinet-tv.png">
+</div>
+
+
 Xem thêm về cách sử dụng youtube-dl [tại đây](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#readme)
