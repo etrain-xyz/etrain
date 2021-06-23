@@ -3,7 +3,7 @@ function changeLanguage(lang, current_lang) {
 		localStorage.setItem('lang', lang);
 
 	if (current_lang) {
-		if (window.location.pathname == "/") {
+		if (window.location.pathname == "/" || window.location.pathname.indexOf("/page/") > -1) {
 			window.location.href = window.location.href
 		} else {
 			var pattern = {
