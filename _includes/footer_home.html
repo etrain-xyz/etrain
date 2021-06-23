@@ -1,0 +1,19 @@
+<footer>
+	<p class="post-vi">
+		<span class="enable_anchor" onclick="changeLanguage('en', 'vi')">{{ site.data.locales.vi.global.english }}</span> | <span class="disable_anchor">{{ site.data.locales.vi.global.vietnamese }}</span>
+	</p>
+	<p class="post-en">
+		<span class="disable_anchor">{{ site.data.locales.en.global.english }}</span> | <span class="enable_anchor" onclick="changeLanguage('vi', 'en')">{{ site.data.locales.en.global.vietnamese }}</span>
+	</p>
+	<p>Made with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <span class="love">❤</span> by <a
+			href="https://github.com/willianjusten/cards-jekyll-template">Willian Justen</a></p>
+</footer>
+<script>
+	BASEURL = window.location.origin;
+	if (localStorage.getItem('lang') == "en") {
+		BASEURL += "/en"
+	}
+</script>
+<script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/js/index.js' | prepend: site.baseurl }}"></script>

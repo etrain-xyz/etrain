@@ -5,9 +5,9 @@ layout: loading
 <main class="home" id="post" role="main" itemprop="mainContentOfPage" itemscope="itemscope"
 	itemtype="http://schema.org/Blog">
 	<div id="grid" class="row flex-grid">
-		{% assign posts = site.posts | where: "locale", page.locale %}
-		{% for post in posts limit:6 %}
-		<article class="box-item post-{{post.main-class}}" itemscope="itemscope"
+		{% assign posts = paginator.posts %}
+		{% for post in posts %}
+		<article class="box-item post-{{post.main-class}} post-{{post.locale}}" itemscope="itemscope"
 			itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 			<span class="ribbon">
 				<a href="{{site.url}}{{site.baseurl}}/category/{{post.main-class}}"><span>{{post.main-class}}</span></a>
@@ -32,7 +32,30 @@ layout: loading
 			</div>
 		</article>
 		{% endfor %}
+
+		{% if paginator.page_trail %}
+		<div class="pagination pagination-style-three">
+		{% for trail in paginator.page_trail %}
+			<a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}" {% if page.url == trail.path %}class="selected"{% endif %}>
+				{{ trail.num }}
+			</a>
+		{% endfor %}
+		</div>
+		{% endif %}
+
+		<!-- <div class="pagination pagination-style-three">
+			{% if posts.size > 30 %}
+			<a href="#">First</a>
+			{% endif %}
+			{% assign total_pages = posts.size | divided_by: 6.0 | ceil %}
+			{% for i in (1..total_pages)%}
+			<a href="/my_page/">{{ i }}</a>
+			{% endfor %}
+			{% if posts.size > 30 %}
+			<a href="#">Last</a>
+			{% endif %}
+		</div> -->
+
+		
 	</div>
 </main>
-
-<script src="{{ '/assets/js/index.js' | prepend: site.baseurl }}"></script>

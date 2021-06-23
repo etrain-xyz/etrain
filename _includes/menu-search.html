@@ -1,10 +1,6 @@
 <header class="bar-header">
     <h1 class="logo">
-		{% if page.locale == "vi" %}
 		<a href="{{site.baseurl}}/"></a>
-		{% else %}
-		<a href="{{site.baseurl}}/en"></a>
-		{% endif %}
     </h1>
 </header>
 
@@ -25,14 +21,14 @@
 <nav id="navigation">
   <h2>MENU</h2>
   <ul>
-    {% for link in site.data.locales[page.locale].menu %}
-      <li><a href="{{ site.url }}{{site.baseurl}}{{ link.url }}">{{ link.title }}</a></li>
-	{% endfor %}
-	{% if page.locale == "vi" %}
-    <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">Feed</a></li>
-	{% elsif page.locale == "en" %}
-    <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/en/feed.xml" title="Atom/RSS feed">Feed</a></li>
-	{% endif %}
+	{% for lang in site.data.global.languages %}
+		{% for link in site.data.locales[lang].menu %}
+		<li class="post-{{lang}}"><a href="{{ site.url }}{{site.baseurl}}{{ link.url }}">{{ link.title }}</a></li>
+		{% endfor %}
+  	{% endfor %}
+    
+    <li class="post-vi"><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">Feed</a></li>
+    <li class="post-en"><a class="feed" href="{{ site.url }}{{site.baseurl}}/en/feed.xml" title="Atom/RSS feed">Feed</a></li>
   </ul>
 </nav>
 </aside>

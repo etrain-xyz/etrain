@@ -1,17 +1,45 @@
 function changeLanguage(lang, current_lang) {
 	if (localStorage)
 		localStorage.setItem('lang', lang);
+
 	if (current_lang) {
-		var pattern = {
-			"vi": window.location.origin,
-			"en": window.location.origin + "/en"
-		};
-		window.location.href = window.location.href.replace(pattern[current_lang], pattern[lang]);
+		if (window.location.pathname == "/") {
+			window.location.href = window.location.href
+		} else {
+			var pattern = {
+				"vi": window.location.origin,
+				"en": window.location.origin + "/en"
+			};
+			window.location.href = window.location.href.replace(pattern[current_lang], pattern[lang]);
+		}
+	} else {
+		if (localStorage.getItem('lang') == "vi") {
+			addAllClass('.post-en', 'hide');
+			removeAllClass('.post-vi', 'hide');
+		} else {
+			addAllClass('.post-vi', 'hide');
+			removeAllClass('.post-en', 'hide');
+		}
+	}
+}
+
+function removeAllClass(selector, class_name) {
+	var list = document.querySelectorAll(selector);
+	for (var i = 0; i < list.length; ++i) {
+		list[i].classList.remove(class_name);
+	}
+}
+function addAllClass(selector, class_name) {
+	var list = document.querySelectorAll(selector);
+	for (var i = 0; i < list.length; ++i) {
+		list[i].classList.add(class_name);
 	}
 }
 
 function hideLoading() {
-	document.querySelector('#outer').classList.add("hide");
+	if (document.querySelector('#outer')) {
+		document.querySelector('#outer').classList.add("hide");
+	}	
 }
 
 function resizeWindow() {
@@ -21,7 +49,7 @@ function resizeWindow() {
 	if (window.innerWidth < 512) {
 		new_w = 330 * window.innerWidth / 512;
 		new_h = 164 * new_w / 330;
-		delta = 512 -  Math.round(window.innerWidth)
+		delta = 512 - Math.round(window.innerWidth)
 		if (window.innerWidth < 486) {
 			delta = delta / 1.4;
 		}

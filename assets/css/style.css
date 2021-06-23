@@ -1,16 +1,22 @@
-h1, h2, h3, h4, h5, h6, time, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+time,
+p {
 	caret-color: transparent;
 	-webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently */
 }
 
-
 .hide {
-	display: none;
+	display: none !important;
 }
 
 .disable_anchor {
@@ -193,10 +199,35 @@ h1, h2, h3, h4, h5, h6, time, p {
 }
 
 .image-link:hover {
-	background: transparent !important;;
+	background: transparent !important;
 	color: transparent !important;
 }
 
 .cabinet-img {
 	margin: 0 auto !important;
+}
+
+.pagination {
+    text-align: center;
+    padding: 20px 0;
+	font-size: 16px;
+	line-height: 1.6;
+	font-weight: 300;
+	color: #262626;
+	width: 100%;
+}
+.pagination-style-three a {
+	padding: 5px 15px;
+	background: #ffffff;
+	color: #ff6407;
+	border-radius: 25px;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+	text-decoration: none;
+}
+.pagination-style-three a.selected,
+.pagination-style-three a:hover,
+.pagination-style-three a:active,
+.pagination-style-three a:focus {
+	color: #fff;
+	background: #ff6407;
 }

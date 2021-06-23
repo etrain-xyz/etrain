@@ -1,5 +1,6 @@
 if (localStorage && localStorage.getItem('lang')) {
-	console.log(localStorage.getItem('lang'))
+	const lang = localStorage.getItem('lang');
+	changeLanguage(lang);
 	setTimeout(function () {
 		hideLoading();
 	}, 1500)
@@ -9,7 +10,7 @@ if (localStorage && localStorage.getItem('lang')) {
 		.then(json => {
 			console.log('My country is: ' + json.countryCode);
 			var en_url = window.location.origin + '/en';
-			if (json.countryCode.toLowerCase() !== 'vn' && window.location.href.indexOf(en_url) < 0) {
+			if (json && json.countryCode && json.countryCode.toLowerCase() !== 'vn' && window.location.href.indexOf(en_url) < 0) {
 				window.location.href = window.location.origin + '/en';
 				changeLanguage("en");
 			} else {

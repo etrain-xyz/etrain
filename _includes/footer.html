@@ -1,9 +1,9 @@
 <footer>
 	<p>
 		{% if page.locale == "vi" %}
-		<span><a class="enable_anchor" onclick="changeLanguage('en', 'vi')">{{ site.data.locales[page.locale].global.english }}</a></span> | <span class="disable_anchor">{{ site.data.locales[page.locale].global.vietnamese }}</span>
+		<span id="footer_en_btn" class="enable_anchor" onclick="changeLanguage('en', 'vi')">{{ site.data.locales[page.locale].global.english }}</span> | <span id="footer_vi_btn" class="disable_anchor">{{ site.data.locales[page.locale].global.vietnamese }}</span>
 		{% elsif page.locale == "en" %}
-		<span class="disable_anchor">{{ site.data.locales[page.locale].global.english }}</span> | <span><a class="enable_anchor" onclick="changeLanguage('vi', 'en')">{{ site.data.locales[page.locale].global.vietnamese }}</a></span>
+		<span id="footer_en_btn" class="disable_anchor">{{ site.data.locales[page.locale].global.english }}</span> | <span id="footer_vi_btn" class="enable_anchor" onclick="changeLanguage('vi', 'en')">{{ site.data.locales[page.locale].global.vietnamese }}</span>
 		{% endif %}
 	</p>
 	<p>Made with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <span class="love">❤</span> by <a
@@ -18,3 +18,4 @@
 </script>
 <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/js/index.js' | prepend: site.baseurl }}"></script>

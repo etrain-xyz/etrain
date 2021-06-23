@@ -3,7 +3,7 @@ global:
   vietnamese: Vietnamese
 menu:
   - title: Home
-    url: /en
+    url: /
   - title: Series
     url: /en/series
   - title: Tags
