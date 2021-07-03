@@ -21,18 +21,10 @@ port: 4000
 host: localhost
 
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-paginate
 
-pagination:
-  enabled: true
-  per_page: 12 # vi+en=12 (real per_page=6)
-  permalink: '/page/:num/'
-  sort_field: 'date'
-  sort_reverse: true
-  trail:
-    before: 2 # The number of links before the current page
-    after: 2  # The number of links after the current page
-
+paginate: 12 # vi+en=12 (real per_page=6)
+paginate_path: "/page:num/"
 
 # html minify
 compress_html:
