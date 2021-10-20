@@ -1,17 +1,17 @@
 ---
-title: "Gán nhãn mũ bảo hiểm NFL"
+title: "Gán nhãn mũ bảo hiểm trong trò chơi bóng bầu dục"
 date: 2021-10-20 14:33:00
 image: '/assets/img/posts/nfl-helmet-assignment.jpg'
-description: 'Gán nhãn mũ bảo hiểm NFL'
-main-class: 'competition'
+description: 'Gán nhãn mũ bảo hiểm trong trò chơi bóng bầu dục'
+main-class: 'guide'
 tags:
 - python
 - deep learning
 - object detection
 - multi-object tracking
 categories:
-twitter_text: 'Gán nhãn mũ bảo hiểm NFL'
-introduction: 'Gán nhãn mũ bảo hiểm NFL'
+twitter_text: 'Gán nhãn mũ bảo hiểm sử dụng Yolov5 Deepsort Pytorch'
+introduction: 'Gán nhãn mũ bảo hiểm sử dụng Yolov5 Deepsort Pytorch'
 ---
 
 ### Giới thiệu

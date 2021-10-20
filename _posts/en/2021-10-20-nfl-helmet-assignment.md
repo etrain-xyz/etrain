@@ -10,8 +10,8 @@ tags:
 - object detection
 - multi-object tracking
 categories:
-twitter_text: 'NFL Helmet Assignment'
-introduction: 'NFL Helmet Assignment'
+twitter_text: 'NFL Helmet Assignment using Yolov5 Deepsort Pytorch'
+introduction: 'NFL Helmet Assignment using Yolov5 Deepsort Pytorch'
 ---
 
 ### Introduction
