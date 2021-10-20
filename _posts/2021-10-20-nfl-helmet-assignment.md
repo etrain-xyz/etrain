@@ -1,8 +1,8 @@
 ---
-title: "Gán nhãn mũ bảo hiểm trong trò chơi bóng bầu dục"
+title: "Gán nhãn mũ bảo hiểm người chơi bóng bầu dục"
 date: 2021-10-20 14:33:00
 image: '/assets/img/posts/nfl-helmet-assignment.jpg'
-description: 'Gán nhãn mũ bảo hiểm trong trò chơi bóng bầu dục'
+description: 'Gán nhãn mũ bảo hiểm người chơi bóng bầu dục'
 main-class: 'guide'
 tags:
 - python
