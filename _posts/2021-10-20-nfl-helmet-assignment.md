@@ -15,7 +15,7 @@ introduction: 'Gán nhãn mũ bảo hiểm sử dụng Yolov5 Deepsort Pytorch'
 ---
 
 ### Giới thiệu
-[Cuộc thi "2021 NFL Health & Safety, Helmet Assignment"](https://www.kaggle.com/c/nfl-health-and-safety-helmet-assignment) là một phần trong nỗ lực hợp tác giữa National Football League (NFL) và Amazon Web Services (AWS) nhằm đưa ra một chương trình giám sát và giảm thiểu chấn thương thể thao tốt nhất. Chúng tôi đang cố gắng đánh nhãn đúng người chơi dựa trên việc phát hiện và theo dõi mũ bảo hiểm của người đó thông qua các đoạn video. Các nhãn bao gồm chữ H (ký hiệu dành cho đội chủ nhà) và chữ V (ký hiệu dành cho đội khách) và theo sau là số áo của cầu thủ. Nhãn người chơi được cung cấp trong dữ liệu theo dõi NGS (Next Gen Stats) cho mỗi lần chơi. Một bài gửi hoàn hảo sẽ xác định chính xác vị trị của mũ bảo hiểm, gán nhãn mũ bảo hiểm một đúng người chơi trên mọi khung hình của video.
+[Cuộc thi "2021 NFL Health & Safety, Helmet Assignment"](https://www.kaggle.com/c/nfl-health-and-safety-helmet-assignment) là một phần trong nỗ lực hợp tác giữa National Football League (NFL) và Amazon Web Services (AWS) nhằm đưa ra một chương trình giám sát và giảm thiểu chấn thương thể thao tốt nhất. Chúng tôi đang cố gắng đánh nhãn đúng người chơi dựa trên việc phát hiện và theo dõi mũ bảo hiểm của người đó thông qua các đoạn video. Các nhãn bao gồm chữ H (ký hiệu dành cho đội chủ nhà) và chữ V (ký hiệu dành cho đội khách) và theo sau là số áo của cầu thủ. Nhãn người chơi được cung cấp trong dữ liệu theo dõi NGS (Next Gen Stats) cho mỗi lần chơi. Một bài gửi hoàn hảo sẽ xác định chính xác vị trí của mũ bảo hiểm, gán nhãn mũ bảo hiểm đúng người chơi trên mọi khung hình của video.
 
 <div>
 <div class="screen-tv">
