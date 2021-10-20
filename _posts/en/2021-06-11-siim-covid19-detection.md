@@ -9,8 +9,8 @@ tags:
 - deep learning
 - EfficientNetV2
 categories:
-twitter_text: 'COVID-19 detection EfficientNetV2'
-introduction: 'COVID-19 detection EfficientNetV2'
+twitter_text: 'COVID-19 detection using EfficientNetV2'
+introduction: 'COVID-19 detection using EfficientNetV2'
 ---
 
 ### Prepare data

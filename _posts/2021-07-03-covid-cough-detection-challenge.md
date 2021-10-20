@@ -3,7 +3,7 @@ title: "Phát hiện sớm COVID-19 qua tiếng ho"
 date: 2021-07-03 08:00:00
 image: '/assets/img/posts/covid-cough-detection.png'
 description: 'Phát hiện sớm COVID-19 qua tiếng ho'
-main-class: 'competition'
+main-class: 'guide'
 tags:
 - python
 - deep learning

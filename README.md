@@ -8,6 +8,6 @@ jekyll serve --safe
 - `post-competition`
 - `post-dev`
 - `post-research`
-- `post-tutorial`
+- `post-repo`
 - `post-demo`
 - `post-funny`
