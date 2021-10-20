@@ -1,6 +1,6 @@
 ---
 title: "Gán nhãn mũ bảo hiểm NFL"
-date: 2021-07-03 08:00:00
+date: 2021-10-20 14:33:00
 image: '/assets/img/posts/nfl-helmet-assignment.jpg'
 description: 'Gán nhãn mũ bảo hiểm NFL'
 main-class: 'competition'
